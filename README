@@ -1,0 +1,103 @@
+# Requirements
+
+- Java 8+
+
+# Building
+
+gradle build
+
+# Executing unit tests
+
+gradle test
+
+Note: Tests results can be verified at blackjack-test/build/reports/tests/test/index.html
+
+
+# Running the application
+
+Open a console and execute command:
+
+gradle --console plain run 
+
+
+How to play
+
+1) Setting initial money available environment variable.
+
+EX: 
+Windows 
+set INITIAL_MONEY_AVAILABLE=300
+
+Linux/Unix
+export INITIAL_MONEY_AVAILABLE=300
+
+
+1) Start the program
+
+a) Access the project folder
+	cd <project folder>
+b) Execute the program
+    gradle --console plain run 
+	
+c) You are prompted with question:
+
+>>You have <configurable value> How much do You like to bet?
+
+d) Type the amount to bet and hit enter:
+Ex: 30
+
+e) Then screen shows the first round result:
+
+>>Your hand:
+>>
+>>SEVEN-SPADE
+>>THREE-SPADE
+>>Your deck is valued at: 10
+>>Dealer hand: JACK-CLUB and [hidden]
+>>Would you like to (1) Hit or (2) Stand?
+
+f) Hit (1) to draw one more card from deck or (2) to stand.
+
+if (1) new results are displayed
+
+EX:
+>>Your hand:
+>>
+>>SEVEN-SPADE
+>>THREE-SPADE
+>>FOUR-CLUB
+>>Your deck is valued at: 14
+>>Dealer hand: JACK-CLUB and [hidden]
+>>Would you like to (1) Hit or (2) Stand? 
+
+
+if (2) then final result is displayed:
+Ex: (dealer wins)
+>>Dealer cards: 
+>>JACK-CLUB
+>>TEN-DIAMON
+>>Dealer beats you!
+>>Dealer's hand is valued at: 20
+>>You have 170.0. How much do You like to bet?
+
+or (player wins)
+
+>>Dealer cards: 
+>>THREE-DIAMON
+>>SIX-HEART
+>>Dealer Draws: FIVE-DIAMON
+>>Dealer Draws: JACK-SPADE
+>>Dealer's hand is valued at: 24
+>>Dealer busts. You win.
+>>You have 190.0. How much do You like to bet?
+
+f) Then if you have more money available, the game goes on otherwise it ends.
+
+
+
+
+
+
+
+
+
